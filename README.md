@@ -30,3 +30,7 @@ bat tests/types.luau
 
 Type annotation detection is heuristic: a `:` is treated as a method call only
 when an identifier and call arguments follow it.
+
+## License
+
+MIT, see `LICENSE`. The syntax is derived from sublimehq/Packages, whose license is in `LICENSE-sublimehq-packages`.
