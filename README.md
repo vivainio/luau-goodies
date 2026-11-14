@@ -19,14 +19,16 @@ It is a copy of the Lua syntax from [sublimehq/Packages](https://github.com/subl
 - `0b` binary literals and `_` digit separators
 - `@attribute` annotations
 
-### Using it with bat
+### Installing it for bat
 
 ```sh
 mkdir -p "$(bat --config-dir)/syntaxes"
-cp syntaxes/Luau.sublime-syntax "$(bat --config-dir)/syntaxes/"
+curl -fsSL -o "$(bat --config-dir)/syntaxes/Luau.sublime-syntax" \
+  https://raw.githubusercontent.com/vivainio/luau-goodies/main/syntaxes/Luau.sublime-syntax
 bat cache --build
-bat tests/types.luau
 ```
+
+Then `bat file.luau` is highlighted as Luau.
 
 Type annotation detection is heuristic: a `:` is treated as a method call only
 when an identifier and call arguments follow it.
